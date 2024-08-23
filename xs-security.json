@@ -1,0 +1,15 @@
+{
+    "xsappname": "ndbs-skill-matrix",
+    "tenant-mode": "dedicated",
+    "description": "Authorization Configurations for Skill Matrix",
+    "scopes": [],
+    "attributes": [],
+    "role-templates": [],
+    "authorities-inheritance": false,
+    "oauth2-configuration": {
+        "redirect-uris": [            
+            "https://*.eu10.hana.ondemand.com/**",
+            "http://localhost:1299/login/callback"
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <MenuItem
+        id="mnitHomepage"
+        visible="true"
+        text="{i18n>homepage}"
+        icon="sap-icon://home"
+        press="onNavToView('RouteHomepage')"
+    />
+    <MenuItem
+        id="mnitPersonnels"
+        visible="true"
+        text="{i18n>personnels}"
+        icon="sap-icon://company-view"
+        press="onNavToView('RoutePersonnels')"
+    />
+ 
+   
+    <MenuItem
+        id="mnitTeams"
+        visible="true"
+        text="{i18n>teams}"
+        icon="sap-icon://collaborate"
+        press="onNavToView('RouteTeams')"
+    />
+  
+    <MenuItem
+        text="{i18n>administration}"
+        icon="sap-icon://key-user-settings"
+        visible="false"
+    >
+        <items>
+            <MenuItem
+                id="mnitAppLogs"
+                visible="false"
+                text="{i18n>logs}"
+                icon="sap-icon://database"
+                press="onNavToView('RouteAppLogs')"
+            />
+            <MenuItem
+                id="mnitVisibility"
+                visible="false"
+                text="{i18n>visibility}"
+                icon="sap-icon://hide"
+                press="onNavToView('RouteVisibility')"
+            />
+            <MenuItem
+                id="mnitConfigurations"
+                visible="false"
+                text="{i18n>configurations}"
+                icon="sap-icon://settings"
+                press="onNavToView('RouteConfigurations')"
+            />
+        </items>
+    </MenuItem>
+</core:FragmentDefinition>

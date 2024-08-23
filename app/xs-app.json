@@ -1,0 +1,11 @@
+{
+    "authenticationMethod": "route",
+    "routes": [
+      {
+        "source": "^/odata/v2/skill-matrix/(.*)$",
+        "destination": "backend-api",
+        "authenticationType": "xsuaa"
+      }
+    ],
+    "welcomeFile": "/comndbsskillmatrixui"
+  }

@@ -1,0 +1,166 @@
+<mvc:View controllerName="com.ndbs.skillmatrixui.controller.HomePage"
+            xmlns:mvc="sap.ui.core.mvc"
+            displayBlock="true"
+            xmlns:core="sap.ui.core"
+            xmlns="sap.m"
+            xmlns:uxap="sap.uxap"
+            xmlns:layout="sap.ui.layout"
+            xmlns:f="sap.f"
+            xmlns:table="sap.ui.table"
+            xmlns:micro="sap.suite.ui.microchart"
+            xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+            xmlns:smartTable="sap.ui.comp.smarttable"
+            xmlns:forms="sap.ui.layout.form"
+            xmlns:rowmodes="sap.ui.table.rowmodes">
+    <Page id="Homepage" title="{i18n>title}" showHeader="false">
+
+      <f:ShellBar
+            title="{i18n>title}"
+            secondTitle="{i18n>homepage}"
+            homeIcon="./img/app_logo.png"
+        >
+            <f:menu>
+                <Menu id="mnHomepage">
+                    <core:Fragment
+                        fragmentName="com.ndbs.skillmatrixui.fragments.common.MenuItems"
+                        type="XML"
+                    />
+                </Menu>
+            </f:menu>
+            <f:profile>
+                <Avatar
+                    press="onOpenPersonalMenu"
+                />
+            </f:profile>
+        </f:ShellBar>
+
+        <uxap:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+            <uxap:headerTitle>
+                <uxap:ObjectPageDynamicHeaderTitle>
+                    <uxap:expandedHeading>
+                        <Title text="" wrapping="true" />
+                    </uxap:expandedHeading>
+    
+                    <uxap:snappedHeading>
+                        <HBox>
+                            <VBox>
+                                <Avatar src="./img/avatar.png" class="sapUiSmallMarginEnd" />
+                            </VBox>
+    
+                            <VBox>
+                                <Title text="Emre Hidir" wrapping="true"/>
+                                <Label text="SAP BTP Developer"/>
+                            </VBox>
+                        </HBox>
+                    </uxap:snappedHeading>
+    
+                    <uxap:expandedContent>
+                        <HBox>
+                            <VBox>
+                                <Avatar src="./img/avatar.png" class="sapUiSmallMarginEnd" />
+                            </VBox>
+    
+                            <VBox>
+                                <Title text="Emre Hidir" wrapping="true"/>
+                                <Label text="SAP BTP Developer"/>
+                            </VBox>
+                        </HBox>
+                    </uxap:expandedContent>  
+                  
+    
+                    <uxap:actions>
+                        <Button text="Edit" type="Emphasized"/>
+                      
+                    </uxap:actions>
+                </uxap:ObjectPageDynamicHeaderTitle>
+            </uxap:headerTitle>
+            <uxap:headerContent>
+             
+            </uxap:headerContent>
+            <uxap:sections>
+               
+    
+                <uxap:ObjectPageSection titleUppercase="false" title="{i18n>personnel}">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection title="{i18n>personelInfo}" titleUppercase="false">
+                            <forms:SimpleForm layout="ColumnLayout" width="100%">
+
+                                <core:Title text="Phone Numbers"/>
+                        
+                                <Label text="Home"/>
+                                <Text text="+ 1 415-321-1234"/>
+                        
+                                <Label text="Office phone"/>
+                                <Text text="+ 1 415-321-5555"/>
+                        
+                            </forms:SimpleForm>
+                        </uxap:ObjectPageSubSection>
+    
+                        <uxap:ObjectPageSubSection id="paymentSubSection" title="{i18n>teamInfo}" titleUppercase="false">
+                                <forms:SimpleForm layout="ColumnLayout" width="100%">
+
+                                <core:Title text="Team Information"/>
+                        
+                                <Label text="Team Name"/>
+                                <Text text="Extensibility Hub"/>
+                        
+                                <Label text="Manager"/>
+                                <Text text="Basak Cakiroglu"/>
+                        
+                            </forms:SimpleForm>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+                <uxap:ObjectPageSection titleUppercase="false" title="{i18n>skillMatrix}">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection title="{i18n>skillMatrix}" titleUppercase="false">
+                            <uxap:blocks>
+                                <smartTable:SmartTable
+                                    id="stSkillSet"
+                                    entitySet="SkillSet"
+                                    smartFilterId="sfbSkillSet"
+                                    tableType="Table"
+                                    enableAutoBinding="true"
+                                    enableExport="true"
+                                    useVariantManagement="false"
+                                    useTablePersonalisation="true"
+                                    showFullScreenButton="true"
+                                    header="{i18n>skillSet}"
+                                    showRowCount="true"
+                                    enableAutoColumnWidth="true"
+                                >
+                                    <smartTable:customToolbar>
+                                        <OverflowToolbar design="Transparent">
+                                            <ToolbarSpacer />
+                                            <OverflowToolbarButton
+                                                icon="sap-icon://add"
+                                                press="onAddNewSkillSet"
+                                            />
+                                            <OverflowToolbarButton
+                                                icon="sap-icon://edit"
+                                                press="onUpdateSkillSet"
+                                            />
+                                            <OverflowToolbarButton
+                                                icon="sap-icon://delete"
+                                                press="onDeleteSkillSet"
+                                            />
+                                        </OverflowToolbar>
+                                    </smartTable:customToolbar>
+                                    <table:Table
+                                        id="uiTblCompanyMapping"
+                                        selectionMode="Single"
+                                    >
+                                            <table:rowMode>
+                                                <rowmodes:Interactive rowCount="18" />
+                                            </table:rowMode>
+                                        
+                                    </table:Table>
+                                </smartTable:SmartTable>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+    </Page>
+</mvc:View>
