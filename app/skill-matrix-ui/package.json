@@ -40,8 +40,5 @@
         "ui5-task-zipper",
         "mbt"
     ]
-  },
-  "workspaces": [
-    "app/*"
-  ]
+  }
 }

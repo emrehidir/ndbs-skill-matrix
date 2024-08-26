@@ -72,11 +72,11 @@
         }
       },
       "destinations": true
+    },    
+    "cov2ap": {
+      "plugin": true
     }
   },
-  "workspaces": [
-    "app/*"
-  ],
   "sapux": [
     "app/skill-matrix-ui"
   ]

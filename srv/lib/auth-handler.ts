@@ -20,7 +20,7 @@ export default class AuthHandler {
 
     public static async checkAdminAuthorization(successFactorsId: string): Promise<boolean> {
         const db: Service = await connect.to("db");
-        const { VHPersonnelInfo } = db.entities("TechTeamReporting");
+        const { VHPersonnelInfo } = db.entities("SkillMatrix");
         const userInfo: IPersonnels | undefined = await db.run(SELECT.one.from(VHPersonnelInfo).where({ sfUser: successFactorsId }));
         const userRole = userInfo?.userRole || ApplicationRoles.NONE;
 
@@ -29,7 +29,7 @@ export default class AuthHandler {
 
     public async checkUserAuthorization(): Promise<void> {
         const db: Service = await connect.to("db");
-        const { VHBackendAuth, VHPersonnelInfo, VHAppResources } = db.entities("TechTeamReporting");
+        const { VHBackendAuth, VHPersonnelInfo, VHAppResources } = db.entities("SkillMatrix");
         const authorizations: IBackendAuthorizations | undefined = await db.run(SELECT.one.from(VHBackendAuth).where({ resourceName: this.resourceName }));
         const userInfo: IPersonnels | undefined = await db.run(SELECT.one.from(VHPersonnelInfo).where({ sfUser: this.successFactorsId }));
         const userRole = userInfo?.userRole || ApplicationRoles.NONE;

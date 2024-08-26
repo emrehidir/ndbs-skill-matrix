@@ -3,6 +3,8 @@
 /* Labels                                                                                                    */
 /*************************************************************************************************************/
 using from './skill-matrix-ui/annotations/homepage/ui-labels';
+using from './skill-matrix-ui/annotations/personnels/ui-labels';
+using from './skill-matrix-ui/annotations/teams/ui-labels';
 
 /*************************************************************************************************************/
 /* Line-Items                                                                                              */

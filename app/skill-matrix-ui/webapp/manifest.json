@@ -99,9 +99,16 @@
       "routes": [
         {
           "name": "RouteHomePage",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetHomePage"
+          ]
+        },
+        {
+          "name": "RoutePersonnels",
+          "pattern": "Personnels",
+          "target": [
+            "TargetPersonnelPage"
           ]
         }
       ],
@@ -112,6 +119,13 @@
           "clearControlAggregation": false,
           "viewId": "HomePage",
           "viewName": "HomePage"
+        },
+        "TargetPersonnelPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PersonnelPage",
+          "viewName": "PersonnelPage"
         }
       }
     },

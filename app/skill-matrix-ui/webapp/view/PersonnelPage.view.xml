@@ -1,0 +1,38 @@
+<mvc:View
+	controllerName="com.ndbs.skillmatrixui.controller.PersonnelPage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page
+    backgroundDesign="Standard"
+    contentOnlyBusy="false"
+    enableScrolling="true"
+    floatingFooter="false"
+    navButtonTooltip=""
+    showFooter="true"
+    showHeader="true"
+    showNavButton="false"
+    showSubHeader="true"
+    title=""
+    titleAlignment="Auto"
+    titleLevel="Auto"
+>
+    <content>
+        
+    </content>
+    <customHeader>
+    </customHeader>
+    <footer>
+    </footer>
+    <headerContent>
+    </headerContent>
+    <landmarkInfo>
+    </landmarkInfo>
+    <subHeader>
+    </subHeader>
+</Page>
+</mvc:View>
